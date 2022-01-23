@@ -1,3 +1,5 @@
+import org.apache.tools.ant.util.JavaEnvUtils.VERSION_1_8
+
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -17,8 +19,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = org.gradle.api.JavaVersion.VERSION_1_8
+        targetCompatibility = org.gradle.api.JavaVersion.VERSION_1_8
     }
 
     packagingOptions {
@@ -36,4 +38,8 @@ dependencies {
     implementation(Dependencies.AndroidX.AppCompat.appCompat)
     implementation(Dependencies.AndroidX.Activity.activityCompose)
     implementation(Dependencies.Images.kamel)
+    implementation("io.github.alexgladkov:odyssey-core:0.2.0") // For core classes
+    implementation("io.github.alexgladkov:odyssey-compose:0.2.0") // For compose extensions
+
+
 }

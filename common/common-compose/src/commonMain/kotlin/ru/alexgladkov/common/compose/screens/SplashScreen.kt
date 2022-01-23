@@ -18,39 +18,86 @@ import ru.alexgladkov.odyssey.core.animations.AnimationType
 import ru.alexgladkov.odyssey.core.animations.defaultFadeAnimation
 import ru.alexgladkov.odyssey.core.animations.defaultPresentationAnimation
 
+
 @Composable
 fun SplashScreen(rootController: RootController) {
-    Box(modifier = Modifier.fillMaxSize()) {
-        Text(
-            modifier = Modifier.padding(24.dp),
-            text = "Splash Screen", fontWeight = FontWeight.Medium, fontSize = 28.sp,
-            color = Color.Black
-        )
 
-        Column(modifier = Modifier.align(Alignment.BottomEnd).padding(16.dp)) {
-            Row {
-                Button(onClick = {
-                    rootController.present(
-                        screen = NavigationTree.Root.Auth.toString(),
-                        params = "Splash",
-                        launchFlag = LaunchFlag.SingleNewTask
-                    )
-                }) {
-                    Text("Auth With No History")
-                }
 
-                Spacer(modifier = Modifier.weight(1f))
+    /*  Column {
+           for (num in 1..13) {
+               Button(onClick = {  }) {
+                   Text("Ячейка $num")
 
-                Button(onClick = {
-                    rootController.present(
-                        screen = NavigationTree.Root.Auth.toString(),
-                        params = "Splash",
-                    )
-                }) {
-                    Text("Auth With History")
-                }
-            }
+               }
+               Text("нажата кнопка $num")
+           }
+       }*/
 
+
+
+    Column {
+
+
+        Button(onClick = {    }) {
+            Text("Ячейка 1")
+        }
+        Button(onClick = {    }) {
+            Text("Ячейка 2")
+        }
+        Button(onClick = {    }) {
+            Text("Ячейка 3")
+        }
+        Button(onClick = {    }) {
+            Text("Ячейка 4")
+        }
+        Button(onClick = {    }) {
+            Text("Ячейка 5")
+        }
+        Button(onClick = {    }) {
+            Text("Ячейка 6")
+        }
+        Button(onClick = {    }) {
+            Text("Ячейка 7")
+        }
+        Button(onClick = {    }) {
+            Text("Ячейка 8")
+        }
+        Button(onClick = {    }) {
+            Text("Ячейка 9")
         }
     }
+
+    /*  Box(modifier = Modifier.fillMaxSize()) {
+          Text(
+              modifier = Modifier.padding(24.dp),
+              text = "Splash Screen", fontWeight = FontWeight.Medium, fontSize = 28.sp,
+              color = Color.Black
+          )
+
+          Column(modifier = Modifier.align(Alignment.BottomEnd).padding(16.dp)) {
+              Row {
+                  Button(onClick = {
+                      rootController.present(
+                          screen = NavigationTree.Root.Auth.toString(),
+                          params = "Splash",
+                          launchFlag = LaunchFlag.SingleNewTask
+                      )
+                  }) {
+                      Text("Auth With No History")
+                  }
+
+                  Spacer(modifier = Modifier.weight(1f))
+
+                  Button(onClick = {
+                      rootController.present(
+                          screen = NavigationTree.Root.Auth.toString(),
+                          params = "Splash",
+                      )
+                  }) {
+                      Text("Auth With History")
+                  }
+              }
+
+          }
+      }*/
 }
