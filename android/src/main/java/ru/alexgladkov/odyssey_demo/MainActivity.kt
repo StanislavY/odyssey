@@ -14,14 +14,22 @@ public class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+       /* val usbManager = getSystemService(Context.USB_SERVICE) as UsbManager
         var usbConnection: UsbDeviceConnection? = null
         var usbInterface: UsbInterface? = null
         var usbRequest: UsbRequest? = null
         var usbInEndpoint: UsbEndpoint? = null
-        var usbOutEndpoint: UsbEndpoint? = null
-        val usbManager = getSystemService(Context.USB_SERVICE) as UsbManager
+        var usbOutEndpoint: UsbEndpoint? = null*/
+
 
         fun enumerate(): Boolean {
+            val usbManager = getSystemService(Context.USB_SERVICE) as UsbManager
+            var usbConnection: UsbDeviceConnection? = null
+            var usbInterface: UsbInterface? = null
+            var usbRequest: UsbRequest? = null
+            var usbInEndpoint: UsbEndpoint? = null
+            var usbOutEndpoint: UsbEndpoint? = null
             val deviceList = usbManager.deviceList
             for (device in deviceList.values) {
 

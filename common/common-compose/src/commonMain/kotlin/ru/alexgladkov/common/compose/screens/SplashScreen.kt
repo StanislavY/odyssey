@@ -1,5 +1,7 @@
 package ru.alexgladkov.common.compose.screens
 
+import android.content.Context
+import android.hardware.usb.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
 import androidx.compose.material.Surface
@@ -38,7 +40,7 @@ fun SplashScreen(rootController: RootController) {
     Column {
 
 
-        Button(onClick = {    }) {
+        Button(onClick = {  }) {
             Text("Ячейка 1")
         }
         Button(onClick = {    }) {
